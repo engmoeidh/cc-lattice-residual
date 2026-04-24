@@ -2,6 +2,8 @@ cff-version: 1.2.0
 title: >-
   Reproducibility archive for "The cosmological-constant branch
   response on the Harrington-Shepard caloron background"
+version: "v1.2"
+doi: "10.5281/zenodo.19729070"
 message: >-
   If you use this archive, please cite both the paper and this
   Zenodo deposit.
@@ -29,4 +31,3 @@ preferred-citation:
     Harrington-Shepard caloron background: a one-loop lattice
     computation
   year: 2026
-  journal: "Classical and Quantum Gravity"
