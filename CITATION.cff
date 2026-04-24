@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+title: >-
+  Reproducibility archive for "The cosmological-constant branch
+  response on the Harrington-Shepard caloron background"
+message: >-
+  If you use this archive, please cite both the paper and this
+  Zenodo deposit.
+type: software
+authors:
+  - given-names: M. M.
+    family-names: Hanash
+    orcid: "https://orcid.org/0009-0002-8426-825X"
+repository-code: "https://github.com/engmoeidh/cc-lattice-residual"
+license: MIT
+keywords:
+  - cosmological constant
+  - lattice gauge theory
+  - caloron
+  - induced gravity
+  - Sakharov
+preferred-citation:
+  type: article
+  authors:
+    - given-names: M. M.
+      family-names: Hanash
+      orcid: "https://orcid.org/0009-0002-8426-825X"
+  title: >-
+    The cosmological-constant branch response on the
+    Harrington-Shepard caloron background: a one-loop lattice
+    computation
+  year: 2026
+  journal: "Classical and Quantum Gravity"

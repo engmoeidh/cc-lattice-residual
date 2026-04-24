@@ -1,0 +1,12 @@
+# Reproducibility requirements for cc-lattice-residual
+# Tested on Python 3.11.9
+
+numpy>=2.0
+scipy>=1.14
+matplotlib>=3.10
+
+# GPU path (optional but recommended for Figure 1/2 timing)
+# Install manually per your CUDA version:
+#   pip install cupy-cuda12x  (for CUDA 12.x)
+#   pip install cupy-cuda11x  (for CUDA 11.x)
+cupy-cuda12x>=14.0 ; platform_system != "Darwin"

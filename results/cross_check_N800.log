@@ -1,0 +1,262 @@
+nohup: ignoring input
+GPU detected: NVIDIA H100 80GB HBM3
+VRAM: 85.0 GB total, 84.5 GB free
+==============================================================================
+CROSS-CHECK: PROJECTED-COMPLEMENT EXACT PRIME ON ROW A (N=800)
+==============================================================================
+  Config: Row A: 18^3 x 12, rho=3.0
+  n_samples = 800, seed = 42
+  Target error: ~1.0 (10× tighter than N=80 run)
+  Expected runtime: ~7.5h on H100
+
+[1] Building caloron...
+  Caloron links mu=0 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18³×12) ... done.
+    done (7s)
+
+[2] Building five physical moduli tangents...
+  Caloron links mu=0 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=0 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=0 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=0 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=0 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=0 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=0 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=0 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18³×12) ... done.
+  Caloron links mu=0 (SD, rho=3.05, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=3.05, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=3.05, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=3.05, L=18³×12) ... done.
+  Caloron links mu=0 (SD, rho=2.95, L=18³×12) ... done.
+  Caloron links mu=1 (SD, rho=2.95, L=18³×12) ... done.
+  Caloron links mu=2 (SD, rho=2.95, L=18³×12) ... done.
+  Caloron links mu=3 (SD, rho=2.95, L=18³×12) ... done.
+    Mode 0: cleaning ratio = 5.605e-07
+    Mode 1: cleaning ratio = 5.479e-07
+    Mode 2: cleaning ratio = 5.479e-07
+    Mode 3: cleaning ratio = 5.479e-07
+    Mode 4: cleaning ratio = 6.556e-07
+
+[3] Building operators...
+    operators built in 91s
+
+[4] Running projected-complement exact prime at three ξ values...
+    Progress reported every 100 samples.
+
+  ═══════ ξ = 1.0000  (xi 1/3) ═══════
+
+    T (inst − free)...
+    [T_inst]  s=100/800  mean=+209619.5723  err=22.3750  n_fail=0  eta=1.2min
+    [T_inst]  s=200/800  mean=+209644.7223  err=15.6803  n_fail=0  eta=1.0min
+    [T_inst]  s=300/800  mean=+209647.6366  err=13.3913  n_fail=0  eta=0.8min
+    [T_inst]  s=400/800  mean=+209645.6466  err=11.7274  n_fail=0  eta=0.6min
+    [T_inst]  s=500/800  mean=+209649.0612  err=10.5720  n_fail=0  eta=0.5min
+    [T_inst]  s=600/800  mean=+209649.2073  err=9.7152  n_fail=0  eta=0.3min
+    [T_inst]  s=700/800  mean=+209649.5694  err=8.8998  n_fail=0  eta=0.2min
+    [T_inst]  s=800/800  mean=+209655.4798  err=8.4591  n_fail=0  eta=0.0min
+    [T_inst] FINAL: +209655.4798 ± 8.4591  (n_fail=0, 1.3min)
+    [T_free]  s=100/800  mean=+209626.9321  err=26.6477  n_fail=0  eta=0.4min
+    [T_free]  s=200/800  mean=+209610.9319  err=17.3671  n_fail=0  eta=0.3min
+    [T_free]  s=300/800  mean=+209614.1234  err=13.8196  n_fail=0  eta=0.2min
+    [T_free]  s=400/800  mean=+209620.3591  err=12.0688  n_fail=0  eta=0.2min
+    [T_free]  s=500/800  mean=+209626.3716  err=10.4429  n_fail=0  eta=0.1min
+    [T_free]  s=600/800  mean=+209624.5748  err=9.3681  n_fail=0  eta=0.1min
+    [T_free]  s=700/800  mean=+209622.8247  err=8.5770  n_fail=0  eta=0.0min
+    [T_free]  s=800/800  mean=+209618.7270  err=8.0709  n_fail=0  eta=0.0min
+    [T_free] FINAL: +209618.7270 ± 8.0709  (n_fail=0, 0.4min)
+
+    F (inst, dF_free = 0)...
+    [F_inst]  s=100/800  mean=+3.1295  err=3.5282  n_fail=0  eta=1.4min
+    [F_inst]  s=200/800  mean=+3.9429  err=2.3954  n_fail=0  eta=1.2min
+    [F_inst]  s=300/800  mean=+2.3065  err=2.0436  n_fail=0  eta=1.0min
+    [F_inst]  s=400/800  mean=+0.6569  err=1.7992  n_fail=0  eta=0.8min
+    [F_inst]  s=500/800  mean=+2.0395  err=1.6005  n_fail=0  eta=0.6min
+    [F_inst]  s=600/800  mean=+1.8022  err=1.4585  n_fail=0  eta=0.4min
+    [F_inst]  s=700/800  mean=+1.9504  err=1.3273  n_fail=0  eta=0.2min
+    [F_inst]  s=800/800  mean=+2.5495  err=1.2216  n_fail=0  eta=0.0min
+    [F_inst] FINAL: +2.5495 ± 1.2216  (n_fail=0, 1.5min)
+
+    G (ghost, inst − free)...
+    [G_inst]  s=100/800  mean=+52395.2718  err=10.8827  n_fail=0  eta=0.3min
+    [G_inst]  s=200/800  mean=+52392.6695  err=7.8661  n_fail=0  eta=0.3min
+    [G_inst]  s=300/800  mean=+52397.2255  err=6.4376  n_fail=0  eta=0.2min
+    [G_inst]  s=400/800  mean=+52400.4308  err=5.5012  n_fail=0  eta=0.2min
+    [G_inst]  s=500/800  mean=+52399.8799  err=5.0452  n_fail=0  eta=0.1min
+    [G_inst]  s=600/800  mean=+52401.6245  err=4.6875  n_fail=0  eta=0.1min
+    [G_inst]  s=700/800  mean=+52401.0221  err=4.3396  n_fail=0  eta=0.0min
+    [G_inst]  s=800/800  mean=+52403.2620  err=4.1155  n_fail=0  eta=0.0min
+    [G_inst] FINAL: +52403.2620 ± 4.1155  (n_fail=0, 0.4min)
+    [G_free]  s=100/800  mean=+52412.3741  err=11.7996  n_fail=0  eta=0.3min
+    [G_free]  s=200/800  mean=+52397.5897  err=8.9012  n_fail=0  eta=0.2min
+    [G_free]  s=300/800  mean=+52395.3990  err=6.9304  n_fail=0  eta=0.2min
+    [G_free]  s=400/800  mean=+52399.0404  err=5.9131  n_fail=0  eta=0.2min
+    [G_free]  s=500/800  mean=+52402.5039  err=5.1755  n_fail=0  eta=0.1min
+    [G_free]  s=600/800  mean=+52399.3748  err=4.6870  n_fail=0  eta=0.1min
+    [G_free]  s=700/800  mean=+52400.9185  err=4.3449  n_fail=0  eta=0.0min
+    [G_free]  s=800/800  mean=+52401.9089  err=4.0629  n_fail=0  eta=0.0min
+    [G_free] FINAL: +52401.9089 ± 4.0629  (n_fail=0, 0.3min)
+
+    h(ξ=1.0000) = -35.3213 ± 16.2572  (4.0min for this ξ)
+    checkpoint saved: ./checkpoints_N800/xi_1.0000.npz
+
+  ═══════ ξ = 1.0450  (xi 2/3) ═══════
+
+    T (inst − free)...
+    [T_inst]  s=100/800  mean=+202667.1736  err=24.3965  n_fail=0  eta=1.1min
+    [T_inst]  s=200/800  mean=+202642.0975  err=16.6919  n_fail=0  eta=0.9min
+    [T_inst]  s=300/800  mean=+202636.2575  err=13.5395  n_fail=0  eta=0.8min
+    [T_inst]  s=400/800  mean=+202628.3182  err=11.5529  n_fail=0  eta=0.6min
+    [T_inst]  s=500/800  mean=+202628.2600  err=10.4680  n_fail=0  eta=0.5min
+    [T_inst]  s=600/800  mean=+202628.2109  err=9.4882  n_fail=0  eta=0.3min
+    [T_inst]  s=700/800  mean=+202620.7125  err=8.6428  n_fail=0  eta=0.2min
+    [T_inst]  s=800/800  mean=+202623.9686  err=7.9779  n_fail=0  eta=0.0min
+    [T_inst] FINAL: +202623.9686 ± 7.9779  (n_fail=0, 1.3min)
+    [T_free]  s=100/800  mean=+202559.4916  err=22.4721  n_fail=0  eta=0.3min
+    [T_free]  s=200/800  mean=+202573.8216  err=16.2076  n_fail=0  eta=0.3min
+    [T_free]  s=300/800  mean=+202588.6734  err=12.7324  n_fail=0  eta=0.2min
+    [T_free]  s=400/800  mean=+202586.6653  err=10.9008  n_fail=0  eta=0.2min
+    [T_free]  s=500/800  mean=+202587.7700  err=9.7578  n_fail=0  eta=0.1min
+    [T_free]  s=600/800  mean=+202587.3499  err=8.9086  n_fail=0  eta=0.1min
+    [T_free]  s=700/800  mean=+202583.7251  err=8.2703  n_fail=0  eta=0.0min
+    [T_free]  s=800/800  mean=+202586.3336  err=7.7771  n_fail=0  eta=0.0min
+    [T_free] FINAL: +202586.3336 ± 7.7771  (n_fail=0, 0.4min)
+
+    F (inst, dF_free = 0)...
+    [F_inst]  s=100/800  mean=-4.5855  err=2.8651  n_fail=0  eta=1.4min
+    [F_inst]  s=200/800  mean=-5.7841  err=2.0275  n_fail=0  eta=1.2min
+    [F_inst]  s=300/800  mean=-5.8548  err=1.6150  n_fail=0  eta=1.0min
+    [F_inst]  s=400/800  mean=-5.4583  err=1.3876  n_fail=0  eta=0.8min
+    [F_inst]  s=500/800  mean=-4.5720  err=1.2670  n_fail=0  eta=0.6min
+    [F_inst]  s=600/800  mean=-4.3852  err=1.1827  n_fail=0  eta=0.4min
+    [F_inst]  s=700/800  mean=-4.4225  err=1.0946  n_fail=0  eta=0.2min
+    [F_inst]  s=800/800  mean=-4.4179  err=1.0165  n_fail=0  eta=0.0min
+    [F_inst] FINAL: -4.4179 ± 1.0165  (n_fail=0, 1.6min)
+
+    G (ghost, inst − free)...
+    [G_inst]  s=100/800  mean=+50658.1149  err=10.0891  n_fail=0  eta=0.4min
+    [G_inst]  s=200/800  mean=+50657.2348  err=7.1773  n_fail=0  eta=0.3min
+    [G_inst]  s=300/800  mean=+50655.3832  err=5.8535  n_fail=0  eta=0.2min
+    [G_inst]  s=400/800  mean=+50649.2590  err=5.2786  n_fail=0  eta=0.2min
+    [G_inst]  s=500/800  mean=+50649.9613  err=4.7685  n_fail=0  eta=0.1min
+    [G_inst]  s=600/800  mean=+50646.7993  err=4.5381  n_fail=0  eta=0.1min
+    [G_inst]  s=700/800  mean=+50645.1723  err=4.2202  n_fail=0  eta=0.0min
+    [G_inst]  s=800/800  mean=+50646.1524  err=3.9084  n_fail=0  eta=0.0min
+    [G_inst] FINAL: +50646.1524 ± 3.9084  (n_fail=0, 0.4min)
+    [G_free]  s=100/800  mean=+50648.5362  err=10.7306  n_fail=0  eta=0.3min
+    [G_free]  s=200/800  mean=+50647.4823  err=8.5046  n_fail=0  eta=0.2min
+    [G_free]  s=300/800  mean=+50648.4385  err=6.6202  n_fail=0  eta=0.2min
+    [G_free]  s=400/800  mean=+50650.7747  err=5.8262  n_fail=0  eta=0.2min
+    [G_free]  s=500/800  mean=+50649.9896  err=5.0872  n_fail=0  eta=0.1min
+    [G_free]  s=600/800  mean=+50646.2739  err=4.6819  n_fail=0  eta=0.1min
+    [G_free]  s=700/800  mean=+50645.4423  err=4.3583  n_fail=0  eta=0.0min
+    [G_free]  s=800/800  mean=+50643.6337  err=4.0926  n_fail=0  eta=0.0min
+    [G_free] FINAL: +50643.6337 ± 4.0926  (n_fail=0, 0.3min)
+
+    h(ξ=1.0450) = -31.8556 ± 16.3962  (3.9min for this ξ)
+    checkpoint saved: ./checkpoints_N800/xi_1.0450.npz
+
+  ═══════ ξ = 1.0900  (xi 3/3) ═══════
+
+    T (inst − free)...
+    [T_inst]  s=100/800  mean=+195852.7145  err=22.8449  n_fail=0  eta=1.2min
+    [T_inst]  s=200/800  mean=+195853.2887  err=16.4479  n_fail=0  eta=1.0min
+    [T_inst]  s=300/800  mean=+195849.5171  err=12.9692  n_fail=0  eta=0.9min
+    [T_inst]  s=400/800  mean=+195852.3657  err=11.0076  n_fail=0  eta=0.7min
+    [T_inst]  s=500/800  mean=+195852.4806  err=9.8194  n_fail=0  eta=0.5min
+    [T_inst]  s=600/800  mean=+195851.5589  err=8.9792  n_fail=0  eta=0.4min
+    [T_inst]  s=700/800  mean=+195852.0449  err=8.2356  n_fail=0  eta=0.2min
+    [T_inst]  s=800/800  mean=+195850.1894  err=7.6243  n_fail=0  eta=0.0min
+    [T_inst] FINAL: +195850.1894 ± 7.6243  (n_fail=0, 1.4min)
+    [T_free]  s=100/800  mean=+195827.0131  err=23.4210  n_fail=0  eta=0.3min
+    [T_free]  s=200/800  mean=+195818.8954  err=15.4117  n_fail=0  eta=0.3min
+    [T_free]  s=300/800  mean=+195812.7723  err=12.1902  n_fail=0  eta=0.2min
+    [T_free]  s=400/800  mean=+195815.2470  err=10.6188  n_fail=0  eta=0.2min
+    [T_free]  s=500/800  mean=+195821.6717  err=9.6451  n_fail=0  eta=0.1min
+    [T_free]  s=600/800  mean=+195825.6898  err=8.7121  n_fail=0  eta=0.1min
+    [T_free]  s=700/800  mean=+195819.5010  err=8.1667  n_fail=0  eta=0.0min
+    [T_free]  s=800/800  mean=+195818.0589  err=7.6229  n_fail=0  eta=0.0min
+    [T_free] FINAL: +195818.0589 ± 7.6229  (n_fail=0, 0.4min)
+
+    F (inst, dF_free = 0)...
+    [F_inst]  s=100/800  mean=-4.4521  err=3.1293  n_fail=0  eta=1.4min
+    [F_inst]  s=200/800  mean=-4.1966  err=2.1637  n_fail=0  eta=1.2min
+    [F_inst]  s=300/800  mean=-6.2994  err=1.8050  n_fail=0  eta=1.0min
+    [F_inst]  s=400/800  mean=-7.6019  err=1.5284  n_fail=0  eta=0.8min
+    [F_inst]  s=500/800  mean=-7.1069  err=1.3660  n_fail=0  eta=0.6min
+    [F_inst]  s=600/800  mean=-6.8919  err=1.2075  n_fail=0  eta=0.4min
+    [F_inst]  s=700/800  mean=-7.2151  err=1.1092  n_fail=0  eta=0.2min
+    [F_inst]  s=800/800  mean=-6.9766  err=1.0252  n_fail=0  eta=0.0min
+    [F_inst] FINAL: -6.9766 ± 1.0252  (n_fail=0, 1.6min)
+
+    G (ghost, inst − free)...
+    [G_inst]  s=100/800  mean=+48976.7239  err=9.4477  n_fail=0  eta=0.3min
+    [G_inst]  s=200/800  mean=+48965.6535  err=6.7590  n_fail=0  eta=0.3min
+    [G_inst]  s=300/800  mean=+48965.3419  err=5.6224  n_fail=0  eta=0.2min
+    [G_inst]  s=400/800  mean=+48958.0595  err=4.9478  n_fail=0  eta=0.2min
+    [G_inst]  s=500/800  mean=+48956.9439  err=4.4429  n_fail=0  eta=0.1min
+    [G_inst]  s=600/800  mean=+48957.5105  err=4.0491  n_fail=0  eta=0.1min
+    [G_inst]  s=700/800  mean=+48960.7125  err=3.8461  n_fail=0  eta=0.0min
+    [G_inst]  s=800/800  mean=+48960.7371  err=3.5617  n_fail=0  eta=0.0min
+    [G_inst] FINAL: +48960.7371 ± 3.5617  (n_fail=0, 0.4min)
+    [G_free]  s=100/800  mean=+48968.8231  err=11.2876  n_fail=0  eta=0.3min
+    [G_free]  s=200/800  mean=+48959.0355  err=7.6154  n_fail=0  eta=0.2min
+    [G_free]  s=300/800  mean=+48958.9109  err=5.9353  n_fail=0  eta=0.2min
+    [G_free]  s=400/800  mean=+48952.8807  err=5.2669  n_fail=0  eta=0.1min
+    [G_free]  s=500/800  mean=+48954.3654  err=4.7229  n_fail=0  eta=0.1min
+    [G_free]  s=600/800  mean=+48957.6551  err=4.3095  n_fail=0  eta=0.1min
+    [G_free]  s=700/800  mean=+48954.8129  err=3.9852  n_fail=0  eta=0.0min
+    [G_free]  s=800/800  mean=+48951.3302  err=3.7983  n_fail=0  eta=0.0min
+    [G_free] FINAL: +48951.3302 ± 3.7983  (n_fail=0, 0.3min)
+
+    h(ξ=1.0900) = -11.0268 ± 16.0475  (5.3min for this ξ)
+    checkpoint saved: ./checkpoints_N800/xi_1.0900.npz
+
+==============================================================================
+CROSS-CHECK RESULTS — ROW A (N_S = 800)
+==============================================================================
+  h(1.000) = -35.3213 ± 16.2572   [T=+36.75, F=+2.55, G=+1.35]
+  h(1.045) = -31.8556 ± 16.3962   [T=+37.63, F=-4.42, G=+2.52]
+  h(1.090) = -11.0268 ± 16.0475   [T=+32.13, F=-6.98, G=+9.41]
+
+  δ_ξ log ζ (exact prime, Simpson)  = -2.4884 ± 1.0563
+  δ_ξ log ζ (adaptive prime, H100)  = -1.6600 ± 0.1860
+  Scheme difference                 = -0.8284
+  Combined uncertainty              = 1.0725
+  Tension                           = 0.77σ
+
+  Bracket (exact prime)             = 0.9170
+  Bracket (adaptive prime)          = 0.8099
+
+  Final state saved: ./checkpoints_N800/final_result.npz
+
+==============================================================================
+VERDICT
+==============================================================================
+  PASS (strong): 0.77σ agreement.
+  Adaptive prime validated by independent scheme at ~1σ precision.

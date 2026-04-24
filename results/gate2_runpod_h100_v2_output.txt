@@ -1,0 +1,82 @@
+GPU: NVIDIA H100 80GB HBM3
+VRAM: 85.0 GB total, 84.5 GB free
+delta-F operator: available
+======================================================================
+GATE 2 DEFINITIVE: RunPod H100 (V3 BULLETPROOF)
+======================================================================
+
+======================================================================
+  32x24_rho4.5: 32^3 x 24, rho=4.5
+  V = 786432, dim = 9437184
+======================================================================
+
+  Building caloron...
+  Caloron links mu=0 (SD, rho=4.50, L=32³×24) ... done.
+  Caloron links mu=1 (SD, rho=4.50, L=32³×24) ... done.
+  Caloron links mu=2 (SD, rho=4.50, L=32³×24) ... done.
+  Caloron links mu=3 (SD, rho=4.50, L=32³×24) ... done.
+=== Diagnostic [32x24_rho4.5] ===
+  lattice        = 32^3 x 24  (V=786432)
+  <plaq>         = 0.99999525
+  Q_clover       = 0.955790  (int: 1)
+  I_W            = 1.135947   [Wilson, target: 1.0]
+  I_clover       = 1.032069   [clover, target: 1.0]
+  delta_+        = 0.036954   [0=SD, 1=ASD]
+  --- error decomposition ---
+  |I_cl - Q|     = 0.076279   [SD + clover discr.]
+  |I_W - I_cl|   = 0.103878   [Wilson vs clover]
+  unitarity      = 1.26e-15
+  rho (fit)      = 4.26
+--- Diagnostic [32x24_rho4.5] ---
+  Building operators...
+  Ghost prime...
+      GPU eigsh: xfer=0.4s, solve=3.2s
+      GPU eigsh: xfer=0.1s, solve=0.8s
+
+  REFERENCE LOW MANIFOLD:
+      GPU eigsh: xfer=2.5s, solve=40.2s
+      GPU eigsh: xfer=0.6s, solve=34.5s
+
+  ============================================================
+  xi = 1.0000 (index 0)
+  ============================================================
+      GPU eigsh: xfer=0.3s, solve=40.2s
+    Transport: min_ov=0.4808, max_lam=0.013699
+      GPU eigsh: xfer=0.1s, solve=34.5s
+    Traces (80 paired) executing on GPU (Custom CG Solver)...
+    Done in 135s (0 failures)
+    T=23.582+/-2.159, F=1.259+/-1.798, G=0.511+/-1.066
+    h=-23.189+/-3.164 [gap=0.0307, ov=0.481]
+
+  ============================================================
+  xi = 1.0450 (index 1)
+  ============================================================
+      GPU eigsh: xfer=0.3s, solve=40.2s
+    Transport: min_ov=0.3883, max_lam=0.029119
+      GPU eigsh: xfer=0.1s, solve=34.4s
+    Traces (80 paired) executing on GPU (Custom CG Solver)...
+    Done in 129s (0 failures)
+    T=21.045+/-2.018, F=-2.906+/-1.761, G=0.556+/-1.007
+    h=-19.376+/-3.107 [gap=0.0154, ov=0.388]
+
+  ============================================================
+  xi = 1.0900 (index 2)
+  ============================================================
+      GPU eigsh: xfer=0.5s, solve=40.2s
+    Transport: min_ov=0.4117, max_lam=0.039759
+      GPU eigsh: xfer=0.1s, solve=34.5s
+    Traces (80 paired) executing on GPU (Custom CG Solver)...
+    Done in 130s (0 failures)
+    T=19.310+/-1.899, F=-5.706+/-1.759, G=0.591+/-0.954
+    h=-16.907+/-3.063 [gap=0.0048, ov=0.412]
+
+  ============================================================
+  INTEGRATION AND ASSEMBLY: 32x24_rho4.5
+  ============================================================
+
+  dlz_full (Simpson)   = -1.6458 +/- 0.2753
+  Bracket (Simpson)    = 0.8071
+
+  GATE 2 PASS: True
+
+DONE
