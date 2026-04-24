@@ -1,0 +1,217 @@
+======================================================================
+ LATTICE DIAGNOSTICS FOR TABLE 1b (CC_2.tex)
+======================================================================
+ Rows: A (18^3 x 12, rho=3.0)
+       B (24^3 x 16, rho=3.5)
+       C (32^3 x 24, rho=4.5)
+
+ Diagnostics:
+   1. Q_cl (topological charge, clover)
+   2. delta_+ (self-duality violation)
+   3. <P> (average plaquette)
+   4. n_sub stability (16 -> 32)
+   5. m^2 regulator dependence (Row A only)
+
+======================================================================
+ Row A: L_s=18, L_t=12, rho=3.0
+======================================================================
+
+  [1] Standard caloron build (n_sub=16) ...
+  Caloron links mu=0 (SD, rho=3.00, L=18네12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18네12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18네12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18네12) ... done.
+      done (7.6 s). shape: (12, 18, 18, 18, 4, 2, 2)
+      Q_cl (clover, summed over all sites)   = +0.894210
+      delta_+ (self-duality violation)        = 4.538e-02
+      <P> (average plaquette)                 = 0.999947
+      Admissibility (plaquette bound, e=0.01) = {'max_deviation': 0.3175056220772644, 'avg_deviation': 0.006770469869421608, 'admissible': True, 'threshold': 0.447, 'Q_exact': 1, 'Q_clover': 0.8942098006396523, 'Q_rounded': 1, 'Q_confidence': 'EXACT'}
+=== Diagnostic [A] ===
+  lattice        = 18^3 x 12  (V=69984)
+  <plaq>         = 0.99994671
+  Q_clover       = 0.894210  (int: 1)
+  I_W            = 1.133663   [Wilson, target: 1.0]
+  I_clover       = 0.983475   [clover, target: 1.0]
+  delta_+        = 0.045382   [0=SD, 1=ASD]
+  --- error decomposition ---
+  |I_cl - Q|     = 0.089265   [SD + clover discr.]
+  |I_W - I_cl|   = 0.150188   [Wilson vs clover]
+  unitarity      = 1.26e-15
+  rho (fit)      = 2.81
+--- Diagnostic [A] ---
+      I_cl (from full_diagnostic)             = +1.133663
+
+  [4] n_sub stability: rebuilding at n_sub=32 ...
+  Caloron links mu=0 (SD, rho=3.00, L=18네12) ... done.
+  Caloron links mu=1 (SD, rho=3.00, L=18네12) ... done.
+  Caloron links mu=2 (SD, rho=3.00, L=18네12) ... done.
+  Caloron links mu=3 (SD, rho=3.00, L=18네12) ... done.
+      done (14.8 s)
+=== Diagnostic [A_nsub32] ===
+  lattice        = 18^3 x 12  (V=69984)
+  <plaq>         = 0.99994671
+  Q_clover       = 0.894197  (int: 1)
+  I_W            = 1.133658   [Wilson, target: 1.0]
+  I_clover       = 0.983465   [clover, target: 1.0]
+  delta_+        = 0.045384   [0=SD, 1=ASD]
+  --- error decomposition ---
+  |I_cl - Q|     = 0.089268   [SD + clover discr.]
+  |I_W - I_cl|   = 0.150193   [Wilson vs clover]
+  unitarity      = 1.26e-15
+  rho (fit)      = 2.81
+--- Diagnostic [A_nsub32] ---
+      I_cl(n_sub=16) = +1.133663
+      I_cl(n_sub=32) = +1.133658
+      |Delta I_cl|/|I_cl|                    = 4.238e-06
+
+======================================================================
+ Row B: L_s=24, L_t=16, rho=3.5
+======================================================================
+
+  [1] Standard caloron build (n_sub=16) ...
+  Caloron links mu=0 (SD, rho=3.50, L=24네16) ... done.
+  Caloron links mu=1 (SD, rho=3.50, L=24네16) ... done.
+  Caloron links mu=2 (SD, rho=3.50, L=24네16) ... done.
+  Caloron links mu=3 (SD, rho=3.50, L=24네16) ... done.
+      done (34.2 s). shape: (16, 24, 24, 24, 4, 2, 2)
+      Q_cl (clover, summed over all sites)   = +0.925036
+      delta_+ (self-duality violation)        = 3.664e-02
+      <P> (average plaquette)                 = 0.999983
+      Admissibility (plaquette bound, e=0.01) = {'max_deviation': 0.2352577851793012, 'avg_deviation': 0.0033166739423499837, 'admissible': True, 'threshold': 0.447, 'Q_exact': 1, 'Q_clover': 0.9250364371952586, 'Q_rounded': 1, 'Q_confidence': 'EXACT'}
+=== Diagnostic [B] ===
+  lattice        = 24^3 x 16  (V=221184)
+  <plaq>         = 0.99998338
+  Q_clover       = 0.925036  (int: 1)
+  I_W            = 1.117430   [Wilson, target: 1.0]
+  I_clover       = 0.998177   [clover, target: 1.0]
+  delta_+        = 0.036637   [0=SD, 1=ASD]
+  --- error decomposition ---
+  |I_cl - Q|     = 0.073140   [SD + clover discr.]
+  |I_W - I_cl|   = 0.119253   [Wilson vs clover]
+  unitarity      = 1.26e-15
+  rho (fit)      = 3.25
+--- Diagnostic [B] ---
+      I_cl (from full_diagnostic)             = +1.117430
+
+  [4] n_sub stability: rebuilding at n_sub=32 ...
+  Caloron links mu=0 (SD, rho=3.50, L=24네16) ... done.
+  Caloron links mu=1 (SD, rho=3.50, L=24네16) ... done.
+  Caloron links mu=2 (SD, rho=3.50, L=24네16) ... done.
+  Caloron links mu=3 (SD, rho=3.50, L=24네16) ... done.
+      done (65.3 s)
+=== Diagnostic [B_nsub32] ===
+  lattice        = 24^3 x 16  (V=221184)
+  <plaq>         = 0.99998338
+  Q_clover       = 0.925030  (int: 1)
+  I_W            = 1.117428   [Wilson, target: 1.0]
+  I_clover       = 0.998171   [clover, target: 1.0]
+  delta_+        = 0.036638   [0=SD, 1=ASD]
+  --- error decomposition ---
+  |I_cl - Q|     = 0.073141   [SD + clover discr.]
+  |I_W - I_cl|   = 0.119256   [Wilson vs clover]
+  unitarity      = 1.26e-15
+  rho (fit)      = 3.25
+--- Diagnostic [B_nsub32] ---
+      I_cl(n_sub=16) = +1.117430
+      I_cl(n_sub=32) = +1.117428
+      |Delta I_cl|/|I_cl|                    = 2.293e-06
+
+======================================================================
+ Row C: L_s=32, L_t=24, rho=4.5
+======================================================================
+
+  [1] Standard caloron build (n_sub=16) ...
+  Caloron links mu=0 (SD, rho=4.50, L=32네24) ... done.
+  Caloron links mu=1 (SD, rho=4.50, L=32네24) ... done.
+  Caloron links mu=2 (SD, rho=4.50, L=32네24) ... done.
+  Caloron links mu=3 (SD, rho=4.50, L=32네24) ... done.
+      done (123.0 s). shape: (24, 32, 32, 32, 4, 2, 2)
+      Q_cl (clover, summed over all sites)   = +0.955790
+      delta_+ (self-duality violation)        = 3.695e-02
+      <P> (average plaquette)                 = 0.999995
+      Admissibility (plaquette bound, e=0.01) = {'max_deviation': 0.14402072918954723, 'avg_deviation': 0.0016624618507645604, 'admissible': True, 'threshold': 0.447, 'Q_exact': 1, 'Q_clover': 0.955790256561709, 'Q_rounded': 1, 'Q_confidence': 'EXACT'}
+=== Diagnostic [C] ===
+  lattice        = 32^3 x 24  (V=786432)
+  <plaq>         = 0.99999525
+  Q_clover       = 0.955790  (int: 1)
+  I_W            = 1.135947   [Wilson, target: 1.0]
+  I_clover       = 1.032069   [clover, target: 1.0]
+  delta_+        = 0.036954   [0=SD, 1=ASD]
+  --- error decomposition ---
+  |I_cl - Q|     = 0.076279   [SD + clover discr.]
+  |I_W - I_cl|   = 0.103878   [Wilson vs clover]
+  unitarity      = 1.26e-15
+  rho (fit)      = 4.26
+--- Diagnostic [C] ---
+      I_cl (from full_diagnostic)             = +1.135947
+
+  [4] n_sub stability: rebuilding at n_sub=32 ...
+  Caloron links mu=0 (SD, rho=4.50, L=32네24) ... done.
+  Caloron links mu=1 (SD, rho=4.50, L=32네24) ... done.
+  Caloron links mu=2 (SD, rho=4.50, L=32네24) ... done.
+  Caloron links mu=3 (SD, rho=4.50, L=32네24) ... done.
+      done (241.5 s)
+=== Diagnostic [C_nsub32] ===
+  lattice        = 32^3 x 24  (V=786432)
+  <plaq>         = 0.99999525
+  Q_clover       = 0.955788  (int: 1)
+  I_W            = 1.135946   [Wilson, target: 1.0]
+  I_clover       = 1.032067   [clover, target: 1.0]
+  delta_+        = 0.036954   [0=SD, 1=ASD]
+  --- error decomposition ---
+  |I_cl - Q|     = 0.076279   [SD + clover discr.]
+  |I_W - I_cl|   = 0.103879   [Wilson vs clover]
+  unitarity      = 1.26e-15
+  rho (fit)      = 4.26
+--- Diagnostic [C_nsub32] ---
+      I_cl(n_sub=16) = +1.135947
+      I_cl(n_sub=32) = +1.135946
+      |Delta I_cl|/|I_cl|                    = 1.097e-06
+
+======================================================================
+ [5] m^2 dependence (Row A, first-order response)
+======================================================================
+
+  Building K_0 (temporal adjoint Laplacian) ...
+  done (1.6 s)
+
+    Building Delta_1 at m^2 = 0.01 ...
+    done (54.2 s). dim = 839808
+    Computing T = Tr[Delta_1^{-1} K_0] with N_S=20 ...
+      sample 5/20: partial mean = 209808.8518
+      sample 10/20: partial mean = 209642.3507
+      sample 15/20: partial mean = 209733.8139
+      sample 20/20: partial mean = 209722.8505
+    T(0.0100) = +209722.8505 +/- 69.9519 (148.6 s)
+
+    Building Delta_1 at m^2 = 0.005 ...
+    done (55.0 s). dim = 839808
+    Computing T = Tr[Delta_1^{-1} K_0] with N_S=20 ...
+      sample 5/20: partial mean = 210012.2077
+      sample 10/20: partial mean = 209857.4672
+      sample 15/20: partial mean = 209933.7207
+      sample 20/20: partial mean = 209923.3612
+    T(0.0050) = +209923.3612 +/- 77.2567 (176.3 s)
+
+  m^2 = 0.01: T = +209722.8505
+  m^2 = 0.005: T = +209923.3612
+  |Delta T|/|T| (first-order response)     = 9.561e-04
+
+======================================================================
+ TABLE 1b SUMMARY (values for CC_2.tex)
+======================================================================
+  Row       I_cl      Q_cl     delta_+       <P>   n_sub stab
+  -----------------------------------------------------------
+  A      +1.1337   +0.8942    4.54e-02    0.9999     4.24e-06
+  B      +1.1174   +0.9250    3.66e-02    1.0000     2.29e-06
+  C      +1.1359   +0.9558    3.70e-02    1.0000     1.10e-06
+
+  m^2 dependence (Row A, first-order response):
+    |Delta T|/|T| at xi=1.0, halving m^2 = 0.01 -> 0.005
+    = 9.561e-04
+
+======================================================================
+ Total wall time: 1118.0 s
+======================================================================
+
+ JSON cached to: C:\Users\MOIED\Desktop\cc-lattice-residual\scripts\..\results\lattice_diagnostics_rowsABC.json

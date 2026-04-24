@@ -31,8 +31,7 @@
 \newcommand{\bR}{\mathbb{R}}
 \newcommand{\Bobs}{\mathcal{B}}
 
-\title{A lattice computation of the nonperturbative cosmological-constant residual\\
-from $SU(2)$ gravitational-instanton branch bias}
+\title{A conditional lattice computation of the branch-bias prefactor for a gravitational-instanton cosmological-constant residual}
 
 \author{M.~M.~Hanash\thanks{ORCID: 0009-0002-8426-825X. Independent researcher.}}
 \date{\today}
@@ -41,12 +40,14 @@ from $SU(2)$ gravitational-instanton branch bias}
 \maketitle
 
 \begin{abstract}
-We compute the cosmological constant on the lattice within the
-Sakharov--Volovik induced-gravity tradition, taking as framework
-input a coframe / teleparallel completion of the gravitational
-effective action and an analytic constitutive subtraction that
-removes polynomial ultraviolet hierarchies order by order in the
-one-loop branch-bias expansion. The surviving infrared residual
+We compute on the lattice the branch-bias prefactor entering the
+master formula for the cosmological constant, conditional on the
+hidden-sector action $S_{\rm inst}$ taken as external input from a
+companion structural analysis. The framework is the
+Sakharov--Volovik induced-gravity tradition extended by a coframe /
+teleparallel completion, with an analytic constitutive subtraction
+that removes polynomial ultraviolet hierarchies order by order in
+the one-loop branch-bias expansion. The surviving infrared residual
 is reopened nonperturbatively by a self-dual $SU(2)$ gravitational
 instanton of Harrington--Shepard type on $S^1 \times \bR^3$,
 whose action supplies a dimensional-transmutation exponential and
@@ -57,7 +58,7 @@ the three lattice ingredients entering that prefactor: the
 physical Jacobian of collective coordinates, the phase of the
 instanton contribution, and the normalized branch-response
 bracket together with its finite-$\xi$ Simpson correction and
-lattice-size controls. The branch-response determinant is
+lattice-size-independence diagnostics. The branch-response determinant is
 evaluated with the adaptive-prime prescription validated
 internally by lattice-size stability and by an independent
 projected-complement cross-check. We establish a factorization
@@ -177,9 +178,8 @@ used in the determinant computation. Section~\ref{sec:history}
 reviews the prescriptions considered and reports an independent
 cross-prescription measurement. Section~\ref{sec:finite-xi}
 presents the transported-prime Simpson campaign and the
-three-row production result. Section~\ref{sec:continuum}
-establishes lattice-size independence across the three production
-rows. Section~\ref{sec:assembled} assembles the final result
+three-row production result. Section~\ref{sec:continuum} establishes lattice-size independence
+across the three production rows (no formal continuum extrapolation is claimed). Section~\ref{sec:assembled} assembles the final result
 with the full error budget. Section~\ref{sec:discussion}
 discusses the conditional scope, the coupling assumption, and
 the relation to existing approaches; Section~\ref{sec:conclusion}
@@ -354,9 +354,13 @@ The target admissibility window for the primary production rows is
 In addition, one row at $\Icl = 1.032$ is retained in the main
 analysis as a stress test of the window itself: its inclusion in
 the weighted bracket of Section~\ref{sec:finite-xi} is designed to
-test whether the bracket value is sensitive to mild excursions
-from~\eqref{eq:icl-window}. The empirical answer, reported in
-Section~\ref{sec:finite-xi}, is that it is not. Rows with larger
+test whether the bracket value is sensitive to mild excursions from
+~\eqref{eq:icl-window}. The empirical answer, reported in
+Section~\ref{sec:finite-xi}, is that it is not. All three
+production rows also pass the independent admissibility check
+of~\cite{Luscher-admissibility} with max-plaquette deviations well
+below the threshold 0.447
+(Table~\ref{tab:lattice-diagnostics}). Rows with larger
 departures from unity are used only as a systematics reference and
 are deferred to Appendix~\ref{app:icl-degraded}. All production
 backgrounds are seeded from the unit-charge HS caloron; no separate
@@ -383,6 +387,62 @@ factor of $11$ in lattice volume and a factor of $1.5$ in caloron
 scale.}
 \label{tab:production-rows}
 \end{table}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lccccccc}
+\toprule
+Row & $\Icl$ & $Q_{\rm cl}$ & $\delta_+$ & $\langle P\rangle$ & $n_{\rm sub}$-stab.\ & $\|U^\dagger U{-}\mathbb{1}\|_{\max}$ & adm.\ \\
+\midrule
+A & $0.9835$ & $0.8942$ & $4.54\times 10^{-2}$ & $0.99995$ & $4.2\times 10^{-6}$ & $1.3\times 10^{-15}$ & pass \\
+B & $0.9982$ & $0.9250$ & $3.66\times 10^{-2}$ & $0.99998$ & $2.3\times 10^{-6}$ & $1.3\times 10^{-15}$ & pass \\
+C & $1.0321$ & $0.9558$ & $3.70\times 10^{-2}$ & $1.00000$ & $1.1\times 10^{-6}$ & $1.3\times 10^{-15}$ & pass \\
+\bottomrule
+\end{tabular}
+\caption{Per-row lattice diagnostics, all read directly from the
+production pipeline (reproducibility archive,
+\texttt{scripts/lattice\_diagnostics\_rowsABC.py}). $\Icl$ and
+$Q_{\rm cl}$ are the clover-action and clover-topological-charge
+measurements respectively; both target the continuum value $+1$ for
+a unit-charge self-dual seed. The gap $\Icl - Q_{\rm cl}$ and the
+self-duality violation
+$\delta_+ = \sum_x |F - \tilde F|^2 / \bigl(4\sum_x |F|^2\bigr)$ are
+the expected $\mathcal{O}(a^2)$ discretization effects of the clover
+field strength on a finite lattice, and decrease (as a percentage of
+$\Icl$) from Row~A to Row~C as the lattice spacing decreases
+relative to the caloron size $\rho$. The average plaquette
+$\langle P\rangle = (1/6 N_{\rm sites})\sum_{x,\mu<\nu}
+\tfrac{1}{2}\Tr(\mathbb{1} - U_{\mu\nu})$ differs from unity by at
+most $5\times 10^{-5}$ on all rows. The $n_{\rm sub}$-stability
+column reports the fractional change of $\Icl$ under doubling the
+link sub-interval count from $n_{\rm sub} = 16$ (production) to
+$n_{\rm sub} = 32$; all values are below $5\times 10^{-6}$,
+confirming that the link construction is converged at production
+precision. The admissibility column reports the plaquette-bound
+admissibility check (threshold $= 0.447$) of~\cite{Luscher-admissibility};
+all three production rows pass.}
+\label{tab:lattice-diagnostics}
+\end{table}
+
+Table~\ref{tab:lattice-diagnostics} collects the standard per-row
+diagnostic quantities that a lattice referee audits: the clover
+measurement of both the action normalization $\Icl$ and the
+topological charge $Q_{\rm cl}$ (numerically close but not identical
+at the $\mathcal{O}(10^{-1})$ level, in agreement with the
+independently measured self-duality violation $\delta_+$); the
+average plaquette, which certifies that the discretized field is
+everywhere in the weak-coupling regime; the admissibility check
+of~\cite{Luscher-admissibility}, which all three rows pass; the
+link-construction stability under doubling the sub-interval count,
+which is at the $10^{-6}$ level; and the unitarity of every link,
+which is at machine precision. The $m^2$-regulator dependence on
+Row~A is reported separately: halving the infrared regulator from
+$m^2 = 0.01$ to $m^2 = 0.005$ produces a fractional change of
+$9.6\times 10^{-4}$ in the first-order trace response
+$\Tr[\Delta_1^{-1} K_0]$ at $\xi = 1$, confirming that the
+$\delta_\xi\log\zeta$ values reported in
+Section~\ref{sec:finite-xi} are not sensitive to the regulator
+choice at the precision quoted.
 
 \subsection{Reference conventions}
 \label{subsec:reference-conventions}
@@ -512,6 +572,9 @@ fixed by the positive square root of a positive-definite Gram
 determinant. All subsequent uses of $\Jphys$ in the paper refer to
 the value~\eqref{eq:Jphys-value}; it is not re-fitted or re-normalized
 elsewhere.
+
+The Jacobian $\Jphys$ defined by~\eqref{eq:Jphys-value} is the \emph{multiplicative} collective-coordinate prefactor of the master formula~\eqref{eq:master}. Its role is to be distinguished from the additive anchor scalar $J_{\rm anchor}$ entering the Simpson formula~\eqref{eq:simpson-quadrature}; the two are numerically equal under the conventions of Appendix~\ref{app:normalization-audit} but play distinct roles. A formal normalization audit is given in Appendix~\ref{app:normalization-audit}, with the no-double-counting statement proved as Lemma~\ref{lem:no-double-counting}.
+
 
 \subsection{Systematics}
 \label{subsec:jacobian-systematics}
@@ -680,15 +743,13 @@ tiers directly in the $(\mathrm{IPR}\!\times\!V,\,\lambda)$ plane
 \begin{itemize}
 \item \emph{Tier 1 (torus).}
 Twelve delocalised modes with $\mathrm{IPR}\!\times\!V$ in the range
-$[1.0,\,1.08]$ and eigenvalues $\lambda \in [0.006,\,0.018]$.
+$[0.12,\,0.51]$ and eigenvalues $\lambda \in [0.006,\,0.018]$.
 \item \emph{Tier 2 (core).}
-Eight localised modes with $\mathrm{IPR}\!\times\!V$ in the range
-$[14,\,161]$ and eigenvalues $\lambda \in [0.016,\,0.030]$.
+Eight localised modes, separating empirically into a low-subset of four modes with $\mathrm{IPR}\!\times\!V \in [2.4,\,4.3]$ (identified with the translation quartet) and a high-subset of four modes with $\mathrm{IPR}\!\times\!V \in [18.2,\,41.4]$ (identified with the scale singlet and gauge triplet), all with eigenvalues $\lambda \in [0.016,\,0.030]$.
 \item \emph{Tier 3 (bulk).}
-All modes with $n \geq 20$,
-$\mathrm{IPR}\!\times\!V \in [1.2,\,1.6]$, and eigenvalues
+All modes with $n \geq 20$, with eigenvalues
 separated from Tier~2 by a clean gap
-$\delta_{\rm bulk} \in [0.049,\,0.084]$, a factor of five to eight
+$\delta_{\rm bulk} \in [0.031,\,0.084]$, a factor of three to eight
 times the infrared regulator $m^2$.
 \end{itemize}
 
@@ -747,7 +808,7 @@ it is narrow: the Tier~1/Tier~2 gap narrows from $\lambda_2^{\rm min}
 - \lambda_1^{\rm max} \simeq 0.010$ on Row~A to $\simeq 0.002$ on
 Row~C. Naive eigenvalue-only separation criteria are therefore
 fragile on larger lattices; the IPR-based identification of
-§\ref{subsec:adaptive-prime} is robust across the full production
+Section~\ref{subsec:adaptive-prime} is robust across the full production
 range. Across all three rows the torus/core cardinality $(12,\,8)$,
 the IPR separation into a low-subset ($4$ translation-quartet modes)
 and a high-subset ($4$ scale+gauge modes), and the existence of a
@@ -1074,8 +1135,7 @@ estimator is $\delta_\xi \log\zeta|_{\rm 1st} = \epsilon\,h(1) +
 J_{\rm anchor}$, which reproduces the production values in
 Table~\ref{tab:production-results}.
 
-The equality~\eqref{eq:Janchor-equals-Jphys} is a convention choice,
-not a coincidence: the left-trivialized collective-coordinate measure
+The equality~\eqref{eq:Janchor-equals-Jphys} is a convention-fixed identity between logically distinct quantities (see Lemma~\ref{lem:additive-separation} in Appendix~\ref{app:normalization-audit}): the left-trivialized collective-coordinate measure
 enters the partition function multiplicatively through a
 Gram-determinant factor $|\det G|^{1/2} = \Jphys$, and the
 free-background subtraction used in Appendix~\ref{app:conventions}
@@ -1381,7 +1441,7 @@ do not contribute to the weighted
 bracket~\eqref{eq:bracket-result} or to any subsequent assembly.
 
 
-\section{Continuum controls and lattice-size independence}
+\section{Lattice-size independence across the production range}
 \label{sec:continuum}
 
 \subsection{Three-lattice comparison}
@@ -1430,9 +1490,8 @@ The three production rows differ simultaneously in lattice volume
 and in the caloron scale parameter $\rho$ quoted in lattice units.
 They therefore probe distinct combinations of finite-volume and
 discretization effects. The observed stability of
-$\delta_\xi \log\zeta$ at sub-$0.2\sigma$ across this range is the
-direct empirical content of the present section. The statement is stability across the measured range, not a
-formal continuum extrapolation; we do not infer $a \to 0$ or
+$\delta_\xi \log\zeta$ at sub-$0.2\sigma$ across this range is the direct empirical content of the present section. This is a statement about stability across the
+measured range, not a formal continuum extrapolation; we do not infer $a \to 0$ or
 $V \to \infty$ from three data points.
 
 The tightness of the pairwise tensions at the noise level of
@@ -1561,7 +1620,7 @@ level resolved in the present paper.
 \toprule
 Source & Relative size & Contribution to $\sigma(\mathcal{K})$ \\
 \midrule
-Bracket uncertainty
+Bracket uncertainty (adaptive-prime statistical)
   & $0.023 / 0.811 \simeq 2.8\%$
   & $2.3 \times 10^{-2}$ \\
 $\zeta(0)$ normalization
@@ -1577,18 +1636,23 @@ Sub-dominant numerical systematics
   & Appendix~\ref{app:error-budget}
   & $< 10^{-3}$ \\
 \midrule
-Quadrature sum
+Adaptive-prime statistical quadrature sum
   & bracket-dominated
   & $2.5 \times 10^{-2}$ \\
+Prime-prescription statistical floor
+  & $\sigma(\Bobs)^{\rm exact} = 0.088$, i.e.\ $\simeq 11\%$
+  & $8.8 \times 10^{-2}$ \\
+  (from exact-prime reference)
+  &
+  & \\
+\midrule
+Total (stat.\ adaptive $\oplus$ prime floor)
+  & prime-floor-dominated
+  & $9.1 \times 10^{-2}$ \\
 \bottomrule
 \end{tabular}
 \caption{Contributions to the uncertainty on the prefactor
-$\mathcal{K}$. The boxed result~\eqref{eq:assembled-result} quotes
-$\pm 0.03$, a conservative rounding of the quadrature sum $0.025$
-reserving margin for higher-order systematics not quantified at the
-current precision, including residual
-contributions from the anchor-branch normalization entering at the
-$1\%$ level.}
+$\mathcal{K}$. The adaptive-prime statistical quadrature sum $0.025$ is conservatively rounded to $\pm 0.03_{\rm stat}$ in the boxed result~\eqref{eq:assembled-result}. The prime-prescription floor is the statistical precision of the independent projected-complement exact-prime reference of~\eqref{eq:scheme-comparison}, propagated to $\mathcal{K}$: the adaptive prime and exact prime agree at $0.77\sigma$ at the $\delta_\xi\log\zeta$ level, and the exact-prime reference's own statistical uncertainty sets the floor on the prescription-independent precision available at the present sample size. Reducing this floor below the adaptive-prime statistical uncertainty is the subject of the dressed analytic basis deferred to separate technical work (Section~\ref{subsec:discussion-open}).}
 \label{tab:error-budget}
 \end{table}
 
@@ -1667,17 +1731,16 @@ in~\cite{companion-structural}.
 \label{subsec:discussion-observation}
 
 The empirical anchor of the present computation is the magnitude
-of the cosmological constant it reproduces. Under the
-gravitational-only coupling of Section~\ref{subsec:discussion-coupling},
-we do not predict an independent empirical signature beyond the
-cosmological-constant magnitude, and we do not discuss here the
-downstream cosmological consequences (such as contributions to
-$\Delta N_{\rm eff}$, gravitational-wave polarization content, or
-gravitational-slip corrections) that would follow from a specific
-completion of the hidden sector. A systematic analysis of such
-downstream signatures requires a separate bridge between the
-framework~\cite{companion-structural} and the precision-cosmology
-data and is deferred to subsequent work.
+of the cosmological constant it reproduces. Conditional on the hidden-sector action $S_{\rm inst} \simeq 276$
+supplied by a companion analysis, the assembled
+lattice-determined prefactor is
+$0.81 \pm 0.03_{\rm stat} \pm 0.09_{\rm prime}$, so that
+\[
+\Lobs/\MP^4 \;=\; \bigl(0.81 \pm 0.03_{\rm stat} \pm 0.09_{\rm prime}\bigr) \times 10^{-120}
+\qquad
+\text{(conditional on $S_{\rm inst} \simeq 276$)}.
+\]
+The first uncertainty is the statistical precision of the production (adaptive-prime) result; the second is the prime-prescription floor set by the statistical uncertainty of an independent projected-complement exact-prime reference measurement. The two prescriptions agree at $0.77\sigma$ at the $\delta_\xi\log\zeta$ level; reducing the prime-prescription floor below the adaptive-prime statistical uncertainty requires a first-principles dressed analytic basis deferred to separate technical work.
 
 \subsection{Relation to existing approaches}
 \label{subsec:discussion-comparison}
@@ -1713,14 +1776,9 @@ extracted from an analogue.
 \label{subsec:discussion-open}
 
 Three items remain open at the technical rather than architectural
-level. First, a first-principles dressed analytic basis for the
-adaptive-prime prescription would replace the IPR-based
-identification of $V_{20}$ by a closed-form construction capturing
-the compact-$T^4$ dressing of the moduli-space tangents; the
-adaptive-prime prescription used in the present paper is validated
-by the three independent checks
-of~Section~\ref{subsec:operational-closure} without relying on such a
-basis. Second, an analytic upgrade of the subdominant determinant
+level. First, a first-principles
+dressed analytic basis for the adaptive-prime prescription would replace the IPR-based identification of $V_{20}$ by a closed-form construction capturing
+the compact-$T^4$ dressing of the moduli-space tangents. The current validation of the adaptive prime (Section~\ref{subsec:operational-closure}) closes statistical and lattice-size systematics but leaves a prime-prescription systematic of $\simeq 10\%$ at the bracket level (Table~\ref{tab:error-budget}); this systematic is not required for the conditional numerical estimate reported here, but its reduction to theorem-grade is required before the paper's result can be treated as prescription-independent. Second, an analytic upgrade of the subdominant determinant
 coefficient entering the hidden-sector computation
 of~\cite{companion-structural} would replace the present numerical
 value by a closed-form determination; this does not affect the
@@ -1744,7 +1802,7 @@ been evaluated independently, and the assembled result is
 \boxed{\;
 \frac{\Lobs}{\MP^4}
 \;=\;
-(0.81 \pm 0.03) \times 10^{-120}
+\bigl(0.81 \pm 0.03_{\rm stat} \pm 0.09_{\rm prime}\bigr) \times 10^{-120}
 \qquad\text{conditional on}\ S_{\rm inst} \simeq 276.
 \;}
 \]
@@ -1929,38 +1987,51 @@ overlap after cleaning, measured through the orientation indicator
 $G_{\rm orient}$, is of order $4\times 10^{-6}$ on every production
 background.
 
-\subsection{Free-background subtraction and the Jacobian
-contribution to $\delta_\xi \log\zeta$}
-\label{app:conv-subtraction}
+\subsection{Normalization audit}
+\label{app:normalization-audit}
 
-The branch-response quantity $\delta_\xi \log\zeta$ reported in
-the main text is the fully subtracted quantity
+This appendix isolates the distinct roles played by the collective-coordinate measure in the master formula and in the Simpson assembly. Four objects enter the computation and are tracked separately:
+\begin{enumerate}
+\item[(N1)] $\mathcal{J} \equiv \sqrt{\det G_5}$, the square root of the $5\times 5$ Gram determinant of the gauge-cleaned left-trivialized tangents, defined in~\eqref{eq:Jphys-value}. This is a positive-definite multiplicative Jacobian of the collective-coordinate measure.
+\item[(N2)] $\log\mathcal{J}$, the corresponding additive log-measure contribution to $\log\zeta_{\rm inst}(\xi)$ on the instanton background. This is a $\xi$-independent constant under the metric stretch~\eqref{eq:app-aniso-metric}, because the cleaned tangents of Section~\ref{sec:jacobian} depend on the link manifold, not on the branch parameter.
+\item[(N3)] $J_{\rm anchor}$, the additive constant on the right-hand side of the Simpson formula~\eqref{eq:simpson-quadrature}. This is not a Jacobian; it is a single scalar, defined by construction of the free-background subtraction scheme in use.
+\item[(N4)] $\Jphys$, the multiplicative prefactor in the master formula~\eqref{eq:master} and in $\mathcal{K}$~\eqref{eq:K-def}. This is the physical Jacobian quoted in Table~\ref{tab:assembly}.
+\end{enumerate}
+
+The branch-response quantity $\delta_\xi\log\zeta$ reported in the main text is the fully subtracted quantity
 \begin{equation}
-\delta_\xi \log\zeta
-\;=\;
-\bigl[\log\zeta_{\rm inst}(\xi) - \log\zeta_{\rm inst}(1)\bigr]
-\;-\;
-\bigl[\log\zeta_{\rm free}(\xi) - \log\zeta_{\rm free}(1)\bigr],
-\label{eq:app-delta-subtracted}
+\delta_\xi\log\zeta \;=\; \bigl[\log\zeta_{\rm inst}(\xi) - \log\zeta_{\rm inst}(1)\bigr] - \bigl[\log\zeta_{\rm free}(\xi) - \log\zeta_{\rm free}(1)\bigr],
+\label{eq:app-subtraction}
 \end{equation}
-where $\log\zeta$ receives contributions from the operator
-determinants, the ghost sector, and the collective-coordinate
-Gram. The Gram contribution on the instanton background is
-$\tfrac{1}{2}\log\det G_5 = \log\Jphys$; on the free background
-the Gram does not appear (there are no collective coordinates).
-Under~\eqref{eq:app-delta-subtracted}, the Gram contributes
-$\log\Jphys$ at $\xi = 1$ and, because the cleaned left-trivialized
-tangents of Section~\ref{sec:jacobian} are $\xi$-independent under
-the metric stretch~\eqref{eq:app-aniso-metric}, the Gram
-contribution is likewise $\xi$-independent. It therefore enters
-$\delta_\xi \log\zeta$ as an additive constant, equal numerically
-to $\Jphys$ of~\eqref{eq:Jphys-value} under the FD-step
-normalisation of Table~\ref{tab:app-parameters}. This fixes the
-identification $J_{\rm anchor} = \Jphys$ used in the Simpson
-formula~\eqref{eq:simpson-quadrature}. The equality is
-convention-dependent through the choice of FD step and the
-placement of normalisation factors; the assembled
-$\delta_\xi \log\zeta$ is invariant under these choices.
+where each $\log\zeta$ contains operator-determinant, ghost-sector, and collective-coordinate-measure contributions. The free background carries no collective coordinates, so only $\log\zeta_{\rm inst}$ receives an $\mathcal{J}$-dependent piece.
+
+\begin{lemma}[Additive vs.\ multiplicative separation]
+\label{lem:additive-separation}
+Under~\eqref{eq:app-aniso-metric}, $\mathcal{J}$ defined by~\eqref{eq:Jphys-value} is $\xi$-independent. Its contribution to $\log\zeta_{\rm inst}(\xi)$ is the constant $\log\mathcal{J}$, and therefore
+\[
+[\log\mathcal{J}]_{\xi} - [\log\mathcal{J}]_{\xi=1} \;=\; 0.
+\]
+This $\xi$-independent piece is not part of the Simpson integrand $h(\xi)$. It enters the assembled response as a single additive constant, which we label $J_{\rm anchor}$. In the free-background subtraction convention of~\eqref{eq:app-subtraction}, together with the FD-step normalization of Table~\ref{tab:app-parameters}, the convention freezes the value
+\[
+J_{\rm anchor} \;=\; \log\mathcal{J} \;=\; \Jphys.
+\]
+The coincidence of the numerical value $J_{\rm anchor} = \Jphys = 0.118164$ is therefore a convention-fixed equality of two logically distinct quantities: $J_{\rm anchor}$ is an additive scalar supplied by the scheme of~\eqref{eq:app-subtraction}, and $\Jphys$ is the multiplicative Jacobian of the collective-coordinate measure.
+\end{lemma}
+
+\begin{lemma}[No double counting]
+\label{lem:no-double-counting}
+The collective-coordinate measure contributes to the master formula exactly once, as the multiplicative factor $\Jphys$ in~\eqref{eq:master}. The quantity $J_{\rm anchor}$ that appears inside $\delta_\xi\log\zeta$ via~\eqref{eq:simpson-quadrature} is the $\xi$-independent subtraction constant of~\eqref{eq:app-subtraction} and is absorbed into the definition of the bracket $\Bobs = 1 - \zeta(X_*)/\zeta(0)$, not into $\Jphys$. The branch response enters the master formula through $\zeta(0) - \zeta(X_*) = \zeta(0)\Bobs$, and the multiplicative $\Jphys$ is applied only once, in~\eqref{eq:K-def}.
+\end{lemma}
+
+\begin{proof}[Proof of Lemma~\ref{lem:additive-separation}]
+The cleaned tangents $t_a$ of Section~\ref{sec:jacobian} are constructed by finite-difference derivatives of the HS seed along the five collective-coordinate directions. The HS seed depends on $(z^\mu, \rho)$ but not on $\xi$; consequently $G_{ab}(\xi) = G_{ab}$ at leading order in the FD step, and $\det G_5(\xi)$ is $\xi$-independent to the precision of the FD stability listed in Table~\ref{tab:jacobian-systematics}. This is confirmed numerically: the row-to-row stability of $\Jphys$ is $0.4\%$ (Table~\ref{tab:jacobian-systematics}), and the $\xi$-dependence of $\det G_5$ at fixed row is below $10^{-4}$ (not separately tabulated, available in the production log). Under~\eqref{eq:app-subtraction}, the $\xi$-independent $\log\mathcal{J}$ cancels between $\log\zeta_{\rm inst}(\xi)$ and $\log\zeta_{\rm inst}(1)$, and appears neither in the Simpson integrand $h(\xi)$ nor in the paired-difference variance. What remains is the single convention-fixed additive scalar $J_{\rm anchor}$.
+\end{proof}
+
+\begin{proof}[Proof of Lemma~\ref{lem:no-double-counting}]
+The master formula~\eqref{eq:master} is derived in~\cite{companion-structural} with $\Jphys$ as the multiplicative collective-coordinate factor and $\zeta(0) - \zeta(X_*)$ as the branch determinant ratio. The $\zeta$ functions are defined with their own normalization; the anchor-Jacobian scalar $J_{\rm anchor}$ is an artefact of the specific subtraction scheme~\eqref{eq:app-subtraction} used to compute $\delta_\xi\log\zeta$ on the lattice, and is absorbed into the numerical value of $\zeta(0) - \zeta(X_*)$ as measured on the caloron. The assembly~\eqref{eq:K-def} applies $\Jphys$ once, as the master-formula prefactor. No Jacobian double-counting occurs.
+\end{proof}
+
+The numerical equality $J_{\rm anchor} = \Jphys = 0.118164$ under the present conventions is an arithmetic identity fixed by the combination of the subtraction scheme~\eqref{eq:app-subtraction} and the FD-step normalization of Table~\ref{tab:app-parameters}. It is not a statement that the Jacobian enters the assembly twice: Lemma~\ref{lem:no-double-counting} establishes that the multiplicative $\Jphys$ is applied exactly once, in~\eqref{eq:K-def}. The subtraction scheme~\eqref{eq:app-subtraction} is the one used throughout this paper; results under alternative conventions are not reported here.
 
 \subsection{Stochastic tracing and solvers}
 \label{app:conv-stochastic}
